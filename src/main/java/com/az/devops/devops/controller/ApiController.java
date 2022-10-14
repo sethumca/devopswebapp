@@ -2,6 +2,8 @@ package com.az.devops.devops.controller;
 
 import java.util.Properties;
 
+import com.az.devops.devops.utils.DevopsException;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +19,7 @@ public class ApiController {
 
     @GetMapping("/testAdvice")
     public void testAdvice() {
-        throw new RuntimeException("This is for test!");
+        throw new DevopsException("This is for test!");
     }
     
 }
