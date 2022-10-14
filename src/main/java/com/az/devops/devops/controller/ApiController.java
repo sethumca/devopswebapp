@@ -14,5 +14,10 @@ public class ApiController {
     public Properties getSystemInfo() {
        return System.getProperties();
     }
+
+    @GetMapping("/testAdvice")
+    public void testAdvice() {
+        throw new RuntimeException("This is for test!");
+    }
     
 }
